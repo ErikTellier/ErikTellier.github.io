@@ -18,6 +18,8 @@ html, body {
 #hi {
     font-family: "Inter", sans-serif;
     text-align: center;
-    font-size: 15vh;
+    font-size: 20vw;
+    font-weight: 700;
     color: var(--hi-color);
+    user-select: none;
 }
