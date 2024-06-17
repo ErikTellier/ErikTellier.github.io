@@ -55,3 +55,14 @@ html, body {
 #down_arrow img:nth-child(2) {
     margin-top: -16px;
 }
+
+@media (min-width: 1050px) {
+    #hi {
+        font-size: 210px;
+    }
+
+    #name {
+        font-size: 52.5px;
+        margin-top: -42px;
+    }
+}
