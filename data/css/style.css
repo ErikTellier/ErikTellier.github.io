@@ -13,6 +13,7 @@ html, body {
     align-items: center;
     background-color: var(--background-color);
     flex-direction: column;
+    user-select: none;
 }
 
 #hi {
@@ -35,5 +36,22 @@ html, body {
     font-size: 5vw;
     font-weight: 200;
     color: var(--hi-color);
-    user-select: none;
+}
+
+#down_arrow {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 16px;
+}
+
+#down_arrow img:nth-child(1) {
+    margin-top: 16px;
+}
+#down_arrow img:nth-child(2) {
+    margin-top: -16px;
 }
