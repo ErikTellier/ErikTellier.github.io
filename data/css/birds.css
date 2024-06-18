@@ -3,6 +3,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    z-index: 0;
 }
 
 .bird {
@@ -18,6 +19,7 @@
     position: absolute;
     left: -100px; /* Ensure starting position is -100px */
     z-index: 0;
+    
 }
 
 @keyframes fly-cycle {
