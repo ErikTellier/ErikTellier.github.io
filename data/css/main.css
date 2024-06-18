@@ -3,17 +3,22 @@
 :root {
     --hi-color: #16161D;
     --background-color: #F5F5F5;
+    
 }
 
 html, body {
     height: 100%;
+    width: 100%;
     margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--background-color);
     flex-direction: column;
     user-select: none;
+    overflow: hidden;
+    overflow: hidden;
 }
 
 #hi {
@@ -25,6 +30,7 @@ html, body {
     user-select: none;
     margin: 0;
     padding: 0;
+    z-index: 2;
 }
 
 #name {
@@ -36,6 +42,7 @@ html, body {
     font-size: 5vw;
     font-weight: 200;
     color: var(--hi-color);
+    z-index: 2;
 }
 
 #down_arrow {
@@ -47,6 +54,7 @@ html, body {
     flex-direction: column;
     position: fixed;
     bottom: 16px;
+    z-index: 2;
 }
 
 #down_arrow img:nth-child(1) {
