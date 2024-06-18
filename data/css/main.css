@@ -59,15 +59,16 @@ html, body {
 
 #down_arrow img:nth-child(1) {
     margin-top: 21px;
-    width: 42px;
-    height: 42px;
-    animation: moveArrow 1s infinite alternate;
 }
 #down_arrow img:nth-child(2) {
     margin-top: -21px;
+}
+
+#down_arrow img{
     width: 42px;
     height: 42px;
     animation: moveArrow 1s infinite alternate;
+    -webkit-animation: moveArrow 1s infinite alternate;
 }
 
 @media (min-width: 1050px) {
@@ -88,5 +89,14 @@ html, body {
     }
     100% {
         transform: translateY(10px);
+    }
+}
+
+@-webkit-keyframes moveArrow {
+    0% {
+        -webkit-transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(10px);
     }
 }
