@@ -61,11 +61,13 @@ html, body {
     margin-top: 21px;
     width: 42px;
     height: 42px;
+    animation: moveArrow 1s infinite alternate;
 }
 #down_arrow img:nth-child(2) {
     margin-top: -21px;
     width: 42px;
     height: 42px;
+    animation: moveArrow 1s infinite alternate;
 }
 
 @media (min-width: 1050px) {
@@ -80,3 +82,11 @@ html, body {
 
 }
 
+@keyframes moveArrow {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
