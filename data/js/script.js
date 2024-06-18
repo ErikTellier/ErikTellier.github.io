@@ -3,9 +3,9 @@ function getRandom(min, max) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    var bird = document.querySelector('.bird');
-    
-    function randomizeBird() {
+    var birdContainer = document.getElementById('bird_container');
+
+    function randomizeBird(bird) {
         var viewportWidth = window.innerWidth;
         
         var baseDuration = 10;
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
         bird.style.transform = `scale(${randomScale})`;
         bird.style.transformOrigin = 'top left';
 
-        var randomDelay = getRandom(2, 5);
+        var randomDelay = getRandom(1, 3);
         bird.style.animationDelay = `-0.5s, ${randomDelay}s`;
         
         bird.style.animationName = 'none';
@@ -31,13 +31,30 @@ document.addEventListener("DOMContentLoaded", function() {
         bird.style.animationName = 'fly-cycle, move-across'; 
     }
 
-    randomizeBird();
+    function createBird() {
+        var bird = document.createElement('div');
+        bird.classList.add('bird');
+        randomizeBird(bird);
+        birdContainer.appendChild(bird);
 
-    bird.addEventListener('animationiteration', function(event) {
-        if (event.animationName === 'move-across') {
-            randomizeBird();
+        bird.addEventListener('animationiteration', function(event) {
+            if (event.animationName === 'move-across') {
+                randomizeBird(bird);
+            }
+        });
+    }
+
+    function initializeBirds() {
+        birdContainer.innerHTML = '';  
+
+        var birdCount = 5; 
+        console.log(`Creating ${birdCount} birds`);
+        for (let i = 0; i < birdCount; i++) {
+            createBird();
         }
-    });
+    }
 
-    window.addEventListener('resize', randomizeBird);
+    initializeBirds();
+
+    window.addEventListener('resize', initializeBirds);
 });
