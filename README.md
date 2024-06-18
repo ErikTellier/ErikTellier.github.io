@@ -11,4 +11,4 @@ I Design Web Experience
 And Bring them to life
 
 # BUG
-TODO: FIX BIRDS OVERFLOW ON MOBILE
+- FIX BIRDS OVERFLOW ON MOBILE : FIXED
