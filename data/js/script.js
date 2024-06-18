@@ -22,6 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
         var randomScale = getRandom(0.4, 1);
         bird.style.transform = `scale(${randomScale})`;
         bird.style.transformOrigin = 'top left';
+
+        var randomDelay = getRandom(2, 5);
+        bird.style.animationDelay = `-0.5s, ${randomDelay}s`;
         
         bird.style.animationName = 'none';
         void bird.offsetWidth;

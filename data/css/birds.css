@@ -13,7 +13,6 @@
     height: 125px;
     will-change: background-position, top, left;
     animation: fly-cycle 1s steps(10) infinite, move-across linear infinite;
-    animation-delay: -0.5s;
     animation-fill-mode: forwards; /* Ensure the animation's final state is applied */
     
     position: absolute;
