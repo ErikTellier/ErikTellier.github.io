@@ -50,10 +50,14 @@ html, body {
 }
 
 #down_arrow img:nth-child(1) {
-    margin-top: 16px;
+    margin-top: 21px;
+    width: 42px;
+    height: 42px;
 }
 #down_arrow img:nth-child(2) {
-    margin-top: -16px;
+    margin-top: -21px;
+    width: 42px;
+    height: 42px;
 }
 
 @media (min-width: 1050px) {
@@ -65,4 +69,6 @@ html, body {
         font-size: 52.5px;
         margin-top: -42px;
     }
+
 }
+
